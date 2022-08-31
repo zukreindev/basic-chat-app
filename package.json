@@ -10,7 +10,6 @@
     },
     "devDependencies": {
         "@vitejs/plugin-vue": "^3.0.1",
-        "axios": "^0.27.2",
         "prettier": "^2.7.1",
         "sass": "^1.54.5",
         "vite": "^3.0.4",

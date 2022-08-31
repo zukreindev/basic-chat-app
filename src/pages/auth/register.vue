@@ -1,7 +1,6 @@
 <script setup>
 import { RouterLink } from 'vue-router';
 import { ref } from 'vue';
-import { request } from 'axios';
 
 let name = ref(null);
 let pass = ref(null);
@@ -11,8 +10,7 @@ let registering = ref(false);
 const register = () => {
     registering.value = true;
 
-    request({
-        url: `${import.meta.env.VITE_API_SERVER}/auth/register`,
+    fetch(`${import.meta.env.VITE_API_SERVER}/auth/register`, {
         body: JSON.stringify({
             name: name.value,
             pass: pass.value,
@@ -21,17 +19,19 @@ const register = () => {
             'Content-Type': 'application/json',
         },
         method: 'POST',
-    }).then(({ data }) => {
-        if (!data.error) {
-            error = null;
+    })
+        .then((res) => res.json())
+        .then((data) => {
+            if (!data.error) {
+                error = null;
 
-            localStorage.setItem('token', data.token);
-            window.location.href = '/app';
-        } else {
-            error.value = `Error - ${data.error}`;
-            registering.value = false;
-        }
-    });
+                localStorage.setItem('token', data.token);
+                window.location.href = '/app';
+            } else {
+                error.value = `Error - ${data.error}`;
+                registering.value = false;
+            }
+        });
 };
 
 const onEnter = (e) => {
