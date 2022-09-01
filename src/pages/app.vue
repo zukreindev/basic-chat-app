@@ -84,7 +84,7 @@ ws.onclose = ({ code }) => {
             break;
         case 4002:
             localStorage.removeItem('token');
-            window.location.href = '/';
+            window.location.href = '/#/auth/register';
             break;
         case 4003:
             window.location.href = '/';

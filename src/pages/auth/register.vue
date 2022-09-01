@@ -26,7 +26,7 @@ const register = () => {
                 error = null;
 
                 localStorage.setItem('token', data.token);
-                window.location.href = '/app';
+                window.location.href = '/#/app';
             } else {
                 error.value = `Error - ${data.error}`;
                 registering.value = false;

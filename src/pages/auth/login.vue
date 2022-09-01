@@ -26,7 +26,7 @@ const login = () => {
                 error.value = null;
 
                 localStorage.setItem('token', data.token);
-                window.location.href = '/app';
+                window.location.href = '/#/app';
             } else {
                 error.value = `Error - ${data.error}`;
                 logging.value = false;
