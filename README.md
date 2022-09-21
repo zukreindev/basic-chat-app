@@ -1,6 +1,6 @@
-# Basic Chat App
+# Basit Çet ep
 
-This template should help get you started developing with Vue 3 in Vite.
+vue ile yaptık babba çok güzel kullanmayanı götten
 
 ## Recommended IDE Setup
 
@@ -13,23 +13,24 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 ## Project Setup
 
 ```sh
-npm install
+yarn
 ```
 
 ### Compile and Hot-Reload for Development
 
 ```sh
-npm run dev
+yarn dev
 ```
 
 ### Compile and Minify for Production
 
 ```sh
-npm run build
+yarn build
 ```
 
 ### Lint with [ESLint](https://eslint.org/)
 
 ```sh
-npm run lint
+yarn lint
 ```
+### Not: yarn kullanmayana gotten s.
